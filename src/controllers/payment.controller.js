@@ -16,10 +16,10 @@ export const createOrder = async (req, res) => {
           quantity: 1,
         },
       ],
-      notification_url: "https://3167-201-213-113-23.ngrok-free.app/webhook",
+      notification_url: "https://cc59-190-104-238-200.ngrok-free.app/webhook?userId=64511f7a16d0e06681281c28&productId=6233812cef721a65be60c62d",
       back_urls: {
-        success: "http://localhost:3000/success",
-        failure: "https://3167-201-213-113-23.ngrok-free.app/failure"
+        success: "https://cc59-190-104-238-200.ngrok-free.app/success",
+        failure: "https://cc59-190-104-238-200.ngrok-free.app/failure"
         // pending: "https://e720-190-237-16-208.sa.ngrok.io/pending",
         // failure: "https://e720-190-237-16-208.sa.ngrok.io/failure",
       },
@@ -38,10 +38,10 @@ export const createOrder = async (req, res) => {
 export const receiveWebhook = async (req, res) => {
   try {
     const payment = req.query;
-    console.log(payment);
+    console.log('PAYMENT IN QUERY HOOK', payment);
     if (payment.type === "payment") {
       const data = await mercadopage.payment.findById(payment["data.id"]);
-      console.log(data);
+      console.log('PAYMENT IN MP', data);
     }
 
     res.sendStatus(204);
