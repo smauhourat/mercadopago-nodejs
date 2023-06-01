@@ -16,10 +16,10 @@ export const createOrder = async (req, res) => {
           quantity: 1,
         },
       ],
-      //notification_url: "https://https://b04d-201-213-113-23.sa.ngrok.io/webhook",
+      notification_url: "https://3167-201-213-113-23.ngrok-free.app/webhook",
       back_urls: {
         success: "http://localhost:3000/success",
-        //failure: "https://https://b04d-201-213-113-23.sa.ngrok.io/failure"
+        failure: "https://3167-201-213-113-23.ngrok-free.app/failure"
         // pending: "https://e720-190-237-16-208.sa.ngrok.io/pending",
         // failure: "https://e720-190-237-16-208.sa.ngrok.io/failure",
       },
