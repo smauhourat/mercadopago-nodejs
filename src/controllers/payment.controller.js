@@ -16,6 +16,7 @@ export const createOrder = async (req, res) => {
           quantity: 1,
         },
       ],
+      auto_return: "approved",
       notification_url: "https://cc59-190-104-238-200.ngrok-free.app/webhook?userId=64511f7a16d0e06681281c28&productId=6233812cef721a65be60c62d",
       back_urls: {
         success: "https://cc59-190-104-238-200.ngrok-free.app/success",
